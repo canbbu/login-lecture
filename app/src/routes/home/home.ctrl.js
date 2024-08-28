@@ -21,8 +21,9 @@ const process = {
         return res.json(response)
     },
     register: (req,res) =>{
-        console.log(req.body.id);
-        return res.json(req.body.id)
+        const user = new User(req.body)
+        const response = user.register()
+        return res.json(response)
     }
 }
 

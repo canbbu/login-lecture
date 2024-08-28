@@ -9,11 +9,13 @@ name = document.querySelector("#name"),
 registerBtn.addEventListener("click",register);
 
 function register(){
+
+    if(!id.value)return alert("아이디를 입력해주세요")
+    if(psword !== pswordConfirm)return alert("패스워드가 일치하지 않습니다.")
     const req={
         id :id.value,
         name : name.value,
         psword: psword.value,
-        pswordConfirm : pswordConfirm.value,
     }
     console.log(req)
 

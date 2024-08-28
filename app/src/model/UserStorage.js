@@ -29,6 +29,11 @@ class UserStorage {
 
         return userInfo
     }
+
+    static save(){
+        const users =this.#users
+        return {success:true}
+    }
 }
 
 module.exports = UserStorage
